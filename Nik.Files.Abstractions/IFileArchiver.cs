@@ -2,5 +2,5 @@
 
 public interface IFileArchiver
 {
-    void Archive(string file, string archiveName);
+    void Archive(string file, string archiveName = "Archive");
 }
