@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace Nik.Files;
+﻿namespace Nik.Files;
 
 public sealed class MoveToFolderFileArchiver : IFileArchiver
 {

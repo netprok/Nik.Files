@@ -8,6 +8,8 @@ public static class ServicesExtensions
         services.AddSingleton<IFileNameGenerator, FileNameGenerator>();
         services.AddSingleton<IFilePathProvider, FilePathProvider>();
         services.AddSingleton<IFileArchiver, MoveToFolderFileArchiver>();
+        services.AddSingleton<ITextFileReader, TextFileReader>();
+        services.AddSingleton<ITextFileWriter, TextFileWriter>();
         return services;
     }
 }

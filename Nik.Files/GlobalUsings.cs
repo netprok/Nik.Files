@@ -4,4 +4,5 @@ global using Nik.Common.Abstractions;
 global using Nik.Files.Abstractions;
 global using Nik.Serialization.Abstractions;
 
-global using System.Reflection;
+global using System.Reflection;global using System.Text;
+global using Microsoft.Extensions.Logging;
