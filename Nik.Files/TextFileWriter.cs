@@ -11,4 +11,14 @@ public sealed class TextFileWriter : ITextFileWriter
     {
         Write(fileName, contents, Encoding.UTF8);
     }
+
+    public void WriteLines(string fileName, string[] lines, Encoding encoding)
+    {
+        Write(fileName, string.Join(Environment.NewLine, lines), encoding);
+    }
+
+    public void WriteLines(string fileName, string[] lines)
+    {
+        WriteLines(fileName, lines, Encoding.UTF8);
+    }
 }
