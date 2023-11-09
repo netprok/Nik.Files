@@ -1,4 +1,5 @@
-﻿namespace Nik.Files
+﻿using Nik.Files;
+namespace Nik.Files.Abstractions
 {
     public interface ITextFileWriter
     {
