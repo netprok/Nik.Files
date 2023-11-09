@@ -1,6 +1,4 @@
-﻿using Nik.Files.Abstractions;
-
-namespace Nik.Files;
+﻿namespace Nik.Files;
 
 public sealed class TextFileWriter : ITextFileWriter
 {
