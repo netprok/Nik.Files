@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nik.Files.Abstractions", "Nik.Files.Abstractions\Nik.Files.Abstractions.csproj", "{79F7FEB7-1C38-4790-994E-17B8142B54E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nik.Files.Abstractions", "Nik.Files.Abstractions\Nik.Files.Abstractions.csproj", "{79F7FEB7-1C38-4790-994E-17B8142B54E7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nik.Files", "Nik.Files\Nik.Files.csproj", "{1412274B-255A-420C-B3F4-9A12AB912833}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_commands", "_commands", "{8C71B373-3371-43E7-B863-5E0D02482DED}"
 	ProjectSection(SolutionItems) = preProject
-		nuget-commands.txt = nuget-commands.txt
+		_commands\nuget-commands.txt = _commands\nuget-commands.txt
 	EndProjectSection
 EndProject
 Global
