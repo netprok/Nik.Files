@@ -1,18 +1,10 @@
 ﻿namespace Nik.Files;
 
-public sealed class MoveToFolderFileArchiver : IFileArchiver
-{
-    private readonly IStringFormatter stringFormatter;
-    private readonly ILogger<MoveToFolderFileArchiver> logger;
-
-    public MoveToFolderFileArchiver(
+public sealed class MoveToFolderFileArchiver(
         IStringFormatter stringFormatter,
-        ILogger<MoveToFolderFileArchiver> logger)
-    {
-        this.stringFormatter = stringFormatter;
-        this.logger = logger;
-    }
-
+        ILogger<MoveToFolderFileArchiver> logger
+    ) : IFileArchiver
+{
     public void Archive(string file, string archiveName)
     {
         logger.LogDebug($"Moving file {file} to archive folder...");

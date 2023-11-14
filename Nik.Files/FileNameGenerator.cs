@@ -1,14 +1,9 @@
 ﻿namespace Nik.Files;
 
-public sealed class FileNameGenerator : IFileNameGenerator
+public sealed class FileNameGenerator(
+    IStringFormatter stringFormatter
+    ) : IFileNameGenerator
 {
-    private readonly IStringFormatter stringFormatter;
-
-    public FileNameGenerator(IStringFormatter stringFormatter)
-    {
-        this.stringFormatter = stringFormatter;
-    }
-
     public string Generate(string path, string prefix, string extension)
     {
         if (extension.StartsWith("."))
