@@ -1,3 +1,3 @@
-global using Nik.Serialization.Abstractions;
+global using Nik.Serialization.Models;
 
-global using System.Text;global using Nik.Serialization.Models;
+global using System.Text;
