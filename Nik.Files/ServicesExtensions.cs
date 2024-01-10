@@ -2,7 +2,7 @@
 
 public static class ServicesExtensions
 {
-    public static IServiceCollection UseFiles(this IServiceCollection services)
+    public static IServiceCollection AddNikFiles(this IServiceCollection services)
     {
         services.AddSingleton<ICsvJoiner, CsvJoiner>();
         services.AddSingleton<IFileNameGenerator, FileNameGenerator>();
