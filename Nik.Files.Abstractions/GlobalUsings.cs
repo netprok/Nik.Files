@@ -1,3 +1,5 @@
 global using Nik.Serialization.Models;
 
+global using System.Collections.Generic;
 global using System.Text;
+global using System.Threading.Tasks;

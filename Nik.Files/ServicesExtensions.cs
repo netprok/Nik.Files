@@ -10,6 +10,7 @@ public static class ServicesExtensions
         services.AddSingleton<IFileArchiver, MoveToFolderFileArchiver>();
         services.AddSingleton<ITextFileReader, TextFileReader>();
         services.AddSingleton<ITextFileWriter, TextFileWriter>();
+        services.AddSingleton<IBinaryFileReader, BinaryFileReader>();
         return services;
     }
 }
