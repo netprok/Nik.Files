@@ -11,6 +11,8 @@ public static class ServicesExtensions
         services.AddSingleton<ITextFileReader, TextFileReader>();
         services.AddSingleton<ITextFileWriter, TextFileWriter>();
         services.AddSingleton<IBinaryFileReader, BinaryFileReader>();
+        services.AddSingleton<IBinaryFileWriter, BinaryFileWriter>();
+
         return services;
     }
 }
