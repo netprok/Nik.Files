@@ -7,5 +7,7 @@ public sealed class BinaryFileWriter : IBinaryFileWriter
         using FileStream fileStream = new(fileName, FileMode.Create);
         using MemoryStream memoryStream = new(content);
         await memoryStream!.CopyToAsync(fileStream);
+        fileStream.Close();
+        memoryStream.Close();
     }
 }

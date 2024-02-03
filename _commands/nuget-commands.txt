@@ -1,6 +1,6 @@
 Install-Package NuGet.CommandLine
 
-dotnet pack -c Release -p:Version=1.2.5
+dotnet pack -c Release -p:Version=1.2.6
 
-nuget add '.\Nik.Files\bin\Release\Nik.Files.1.2.5.nupkg' -source 'D:\OneDrive\Software Development\nik-nuget-package-source'
-nuget add '.\Nik.Files.Abstractions\bin\Release\Nik.Files.Abstractions.1.2.5.nupkg' -source 'D:\OneDrive\Software Development\nik-nuget-package-source'
+nuget add '.\Nik.Files\bin\Release\Nik.Files.1.2.6.nupkg' -source 'D:\OneDrive\Software Development\nik-nuget-package-source'
+nuget add '.\Nik.Files.Abstractions\bin\Release\Nik.Files.Abstractions.1.2.6.nupkg' -source 'D:\OneDrive\Software Development\nik-nuget-package-source'
