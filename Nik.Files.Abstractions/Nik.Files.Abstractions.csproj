@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nik.Serialization.Models" Version="1.2.0" />
-    <PackageReference Include="NuGet.CommandLine" Version="6.8.0">
+    <PackageReference Include="Nik.Serialization.Models" Version="1.3.0" />
+    <PackageReference Include="NuGet.CommandLine" Version="6.9.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
