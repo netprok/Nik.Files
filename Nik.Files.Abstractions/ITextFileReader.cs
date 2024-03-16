@@ -2,11 +2,11 @@
 
 public interface ITextFileReader
 {
-    string Read(string fileName, Encoding encoding);
+    Task<string> ReadAsync(string fileName, Encoding encoding);
 
-    string Read(string fileName);
+    Task<string> ReadAsync(string fileName);
 
-    string[] ReadLines(string fileName, Encoding encoding);
+    Task<string[]> ReadLinesAsync(string fileName, Encoding encoding);
 
-    string[] ReadLines(string fileName);
+    Task<string[]> ReadLinesAsync(string fileName);
 }

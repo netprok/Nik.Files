@@ -2,19 +2,22 @@
 
 public sealed class TextFileReader : ITextFileReader
 {
-    public string Read(string fileName, Encoding encoding)
+    public async Task<string> ReadAsync(string fileName, Encoding encoding)
     {
         using StreamReader streamReader = new(fileName, encoding);
 
-        var result = streamReader.ReadToEnd();
+        var result = await streamReader.ReadToEndAsync();
         streamReader.Close();
 
         return result;
     }
 
-    public string Read(string fileName) => Read(fileName, Encoding.UTF8);
+    public Task<string> ReadAsync(string fileName) =>
+        ReadAsync(fileName, Encoding.UTF8);
 
-    public string[] ReadLines(string fileName, Encoding encoding) => Read(fileName, encoding).Split(Environment.NewLine);
+    public async Task<string[]> ReadLinesAsync(string fileName, Encoding encoding) =>
+       (await ReadAsync(fileName, encoding))
+        .Split(Environment.NewLine);
 
-    public string[] ReadLines(string fileName) => ReadLines(fileName, Encoding.UTF8);
+    public Task<string[]> ReadLinesAsync(string fileName) => ReadLinesAsync(fileName, Encoding.UTF8);
 }
