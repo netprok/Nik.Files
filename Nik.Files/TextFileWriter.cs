@@ -2,23 +2,33 @@
 
 public sealed class TextFileWriter : ITextFileWriter
 {
-    public void Write(string fileName, string contents, Encoding encoding)
+    public async Task WriteAsync(string fileName, string content, Encoding encoding)
     {
-        File.WriteAllText(fileName, contents, encoding);
+        ArgumentNullException.ThrowIfNull(fileName);
+        ArgumentNullException.ThrowIfNull(content);
+
+        var directoryName = Path.GetDirectoryName(fileName);
+        if (!string.IsNullOrEmpty(directoryName) && !Directory.Exists(directoryName))
+            Directory.CreateDirectory(directoryName);
+
+        using FileStream stream = new(fileName, FileMode.Create, FileAccess.Write, FileShare.None, bufferSize: 4096, useAsync: true);
+
+        var encodedText = encoding.GetBytes(content);
+        await stream.WriteAsync(encodedText).ConfigureAwait(false);
     }
 
-    public void Write(string fileName, string contents)
+    public Task WriteAsync(string fileName, string contents)
     {
-        Write(fileName, contents, Encoding.UTF8);
+        return WriteAsync(fileName, contents, Encoding.UTF8);
     }
 
-    public void WriteLines(string fileName, string[] lines, Encoding encoding)
+    public Task WriteLinesAsync(string fileName, string[] lines, Encoding encoding)
     {
-        Write(fileName, string.Join(Environment.NewLine, lines), encoding);
+        return WriteAsync(fileName, string.Join(Environment.NewLine, lines), encoding);
     }
 
-    public void WriteLines(string fileName, string[] lines)
+    public Task WriteLinesAsync(string fileName, string[] lines)
     {
-        WriteLines(fileName, lines, Encoding.UTF8);
+        return WriteLinesAsync(fileName, lines, Encoding.UTF8);
     }
 }

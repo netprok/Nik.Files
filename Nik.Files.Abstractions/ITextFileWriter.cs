@@ -1,12 +1,13 @@
-﻿namespace Nik.Files.Abstractions;
+﻿
+namespace Nik.Files.Abstractions;
 
 public interface ITextFileWriter
 {
-    void Write(string fileName, string contents, Encoding encoding);
+    Task WriteAsync(string fileName, string content, Encoding encoding);
 
-    void Write(string fileName, string contents);
+    Task WriteAsync(string fileName, string content);
 
-    void WriteLines(string fileName, string[] lines, Encoding encoding);
+    Task WriteLinesAsync(string fileName, string[] lines, Encoding encoding);
 
-    void WriteLines(string fileName, string[] lines);
+    Task WriteLinesAsync(string fileName, string[] lines);
 }
