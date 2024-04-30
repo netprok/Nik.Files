@@ -1,4 +1,4 @@
-namespace Nik.Nik.Files.UnitTests.UnitTests;
+namespace Nik.Files.UnitTests;
 
 public sealed class BinaryFilesTests
 {
